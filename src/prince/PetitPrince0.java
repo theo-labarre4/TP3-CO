@@ -2,8 +2,9 @@ package prince;
 
 import asteroide.Sujet;
 import asteroide.console.ConsoleJavaBoy;
+import jeux.Joueur;
 
-public class PetitPrince0 implements Sujet {
+public class PetitPrince0 implements Sujet, Joueur {
 	
 	private String nom;
 	private int argent;
@@ -35,6 +36,19 @@ public class PetitPrince0 implements Sujet {
 		this.console.parler("Salut c'est "+this.nom);
 		this.console.seDirigerVers(0);
 
+		if (this.console.regarder() != null) {
+			
+		}
+	}
+
+	@Override
+	public void gagner(int argent) {
+		this.argent += argent;		
+	}
+
+	@Override
+	public void perdre(int argent) {
+		this.argent -= argent;
 	}
 
 }

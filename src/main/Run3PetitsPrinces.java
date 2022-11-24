@@ -1,5 +1,6 @@
 package main;
 
+import jeux.JeuShifumi;
 import prince.PetitPrince0;
 
 
